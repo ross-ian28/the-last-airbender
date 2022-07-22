@@ -1,0 +1,8 @@
+<%= @characters.count %> people live in this nation
+<% @characters.take(25).each do |character| %>
+  <p><strong><%= character.name %></strong></p>
+  <%= image_tag "#{character.photo}" %>
+  <p>Allies: <%= character.allies %></p>
+  <p>Enemies: <%= character.enemies %></p>
+  <p>Affiliation: <%= character.affiliation %></p>
+<% end %>
